@@ -1,7 +1,7 @@
 
-<div style="align-center">
+<div align="center">
 
-Em desenvolvimento
+# Em desenvolvimento
 
 
 <div>
