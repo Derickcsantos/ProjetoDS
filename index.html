@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Habilidades</a></li>
+        <li><a href="#">Contatos</a></li>
+      </ul>
+      <button class="botao">Login</button>
+    </nav>
+    <!-- Seção Apresentação-->
+    <section id="about">
+      <div class="about-content">
+        <img src="" alt="Foto de Perfil" class="profile-picture" />
+        <div class="about-text">
+          <h2>Olá, eu sou Dev</h2>
+          <p>
+            Sou um desenvolvedor web com experiência em criação de sites
+            modernos e responsivos. Adoro explorar novas tecnologias e criar
+            soluções práticas e funcionais. Me especializo em HTML, CSS,
+            JavaScript, e frameworks modernos como React e Node.js.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/seuusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/seuusername" target="_blank"
+              >LinkedIn</a
+            >
+            <a href="mailto:email@example.com">E-mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Habilidades-->
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <h3>HTML & CSS</h3>
+          <p>Desenvolvimento de layouts responsivos e interfaces amigáveis.</p>
+          <button onclick="showSkillDetail('HTML & CSS')">Ver Mais</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <h3>JavaScript</h3>
+          <p>Programação interativa e dinâmicas de front-end.</p>
+          <button onclick="showSkillDetail('JavaScript')">Ver Mais</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <h3>React</h3>
+          <p>
+            Criação de aplicações web dinâmicas e componentes reutilizáveis.
+          </p>
+          <button onclick="showSkillDetail('React')">Ver Mais</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Projetos -->
+    <section id="projects">
+      <h2 class="espaco">Projetos</h2>
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <h3>Projeto 1</h3>
+          <p>
+            Descrição do projeto 1. Este projeto utiliza HTML, CSS e JavaScript.
+          </p>
+          <button onclick="viewProject('Projeto 1')">Ver Mais</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <h3>Projeto 2</h3>
+          <p>Descrição do projeto 2. Este projeto utiliza HTML, CSS e React.</p>
+          <button onclick="viewProject('Projeto 2')">Ver Mais</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <h3>Projeto 3</h3>
+          <p>
+            Descrição do projeto 3. Este projeto utiliza HTML, CSS e Node.js.
+          </p>
+          <button onclick="viewProject('Projeto 3')">Ver Mais</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
