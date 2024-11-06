@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    background-color: #f6f6f6;
+    color: #444;
+    text-align: center;
+}
+
+.container h1{
+    margin: 20px 0 0 0;
+}
+
+form{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input{
+    margin: 20px;
+    border-radius: 7px;
+    height: 40px;
+    border: 1px solid #ccc;
+    width: 90%;
+}
+
+form input::placeholder{
+    padding: 10px;
+}
