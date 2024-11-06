@@ -10,7 +10,7 @@ O projeto DS é uma aplicação web com a finalidade de desenvolver habilidades 
 
 | Front-end  | Back-end   | Ferramentas       |Banco de dados| API       |
 |:-----------|:-----------|:------------------|:-------------|:----------|
-| HTML5      | Javascript | Visual Studio Code| MongoDB      | Vlibras   |
+| HTML5      | Javascript | Visual Studio Code| MySQL        | Vlibras   |
 | CSS3       | Node.js    | Trello            | BR modelo    | Recapcha  |
 | JavaScript | Express.js | StarUML           |              |           |
 |            | EJS        | Scrum             |              |           |
