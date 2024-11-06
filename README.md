@@ -6,6 +6,7 @@
 ## Sobre o projeto :mag:
 O projeto DS é uma aplicação web com a finalidade de desenvolver habilidades em POO (Programação Orientada a Objetos) contendo três microserviços, landing page home com informações sobre os desenvolvedores e mais sobre o projeto. Pagina de login com validações e Área administrativa para que o usuário possa configurar seu perfil.
 
+
 ## Tecnologias utilizadas :electric_plug:
 
 | Front-end  | Back-end   | Ferramentas       |Banco de dados| API       |
@@ -14,6 +15,26 @@ O projeto DS é uma aplicação web com a finalidade de desenvolver habilidades 
 | CSS3       | Node.js    | Trello            | BR modelo    | Recapcha  |
 | JavaScript | Express.js | StarUML           |              |           |
 |            | EJS        | Scrum             |              |           |
+
+
+
+## Como clonar o repositório :open_file_folder:
+
+Para clonar o repositório, utilize o comando:
+
+```bash
+git clone https://github.com/Derickcsantos/ProjetoDS.git
+```
+
+Instalando as dependências
+```bash
+npm Install
+```
+
+Inicializando o servidor
+```bash
+npm run start
+```
 
 
 ## Sobre nós :books:
