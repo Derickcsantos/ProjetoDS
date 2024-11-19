@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">Início</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#">Contatos</a></li>
+      </ul>
+      <a href="login.html"><button class="botao">Login</button></a>
+    </nav>
+    <!-- Seção Apresentação-->
+    <section id="about">
+      <div class="about-content">
+        <img src="assets/img/perfil.jpg" alt="Foto de Perfil" class="profile-picture" />
+        <div class="about-text">
+          <h2>Olá, eu sou Dev</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis diam ex. Etiam cursus lectus risus, eget lacinia nibh consequat sed. Nulla quis varius enim, placerat maximus velit. Aenean non tristique est, quis consectetur ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean dapibus odio vel lacinia ullamcorper. Donec in consectetur dolor. Morbi quis ex mattis est facilisis maximus. Etiam at metus vel felis cursus finibus. Quisque varius, elit nec viverra auctor, ex quam lacinia augue, non iaculis augue erat a quam. Integer lacus nibh, convallis non lacinia a, luctus sed eros. Morbi eleifend ante id nulla sollicitudin interdum. Duis vestibulum, ligula et pellentesque bibendum, urna velit auctor elit, non finibus nunc lorem quis ex. Pellentesque semper massa at lectus tempor porta. Duis bibendum urna quis commodo convallis. Curabitur ac mi quis diam feugiat auctor.
+            Etiam sodales eget nisl eu porta. Ut sed finibus est. Morbi in efficitur tellus. Vivamus posuere felis sit amet risus consectetur, eget laoreet orci commodo. In at ante sed lectus auctor volutpat. Integer in lorem mattis, tincidunt massa id, accumsan metus. Suspendisse pretium rhoncus justo nec pharetra. Aenean dui quam, elementum in euismod non, faucibus vitae risus. Morbi mollis risus ut iaculis imperdiet. Pellentesque viverra et lorem imperdiet auctor. Sed interdum ante orci, nec ornare mauris condimentum sed. Donec et erat quam.
+            Proin non dolor libero. Duis accumsan magna a elementum pellentesque. Suspendisse porttitor dignissim dolor sit amet feugiat. In at justo nec tortor eleifend sollicitudin. Donec mollis ac tellus in sagittis. Nulla ac velit turpis. Praesent lobortis velit turpis, volutpat consequat tellus consequat vitae. Aliquam lobortis dictum congue.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/seuusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/seuusername" target="_blank"
+              >LinkedIn</a
+            >
+            <a href="mailto:email@example.com">E-mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Habilidades-->
+    <section id="skills">
+      <h2 class="espaco">Habilidades</h2>
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <h3>HTML & CSS</h3>
+          <p>Desenvolvimento de layouts responsivos e interfaces amigáveis.</p>
+          <button onclick="showSkillDetail('HTML & CSS')">Ver Mais</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <h3>JavaScript</h3>
+          <p>Programação interativa e dinâmicas de front-end.</p>
+          <button onclick="showSkillDetail('JavaScript')">Ver Mais</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <h3>React</h3>
+          <p>
+            Criação de aplicações web dinâmicas e componentes reutilizáveis.
+          </p>
+          <button onclick="showSkillDetail('React')">Ver Mais</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Projetos -->
+    <section id="projects">
+      <h2 class="espaco">Projetos</h2>
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <h3>Projeto 1</h3>
+          <p>
+            Descrição do projeto 1. Este projeto utiliza HTML, CSS e JavaScript.
+          </p>
+          <button onclick="viewProject('Projeto 1')">Ver Mais</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <h3>Projeto 2</h3>
+          <p>Descrição do projeto 2. Este projeto utiliza HTML, CSS e React.</p>
+          <button onclick="viewProject('Projeto 2')">Ver Mais</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <h3>Projeto 3</h3>
+          <p>
+            Descrição do projeto 3. Este projeto utiliza HTML, CSS e Node.js.
+          </p>
+          <button onclick="viewProject('Projeto 3')">Ver Mais</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+          <p class="footer-text">© 2024 Meu Website</p>
+          <ul class="footer-links">
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Privacidade</a></li>
+          </ul>
+      </div>
+  </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

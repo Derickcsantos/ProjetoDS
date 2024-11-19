@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/login.css">
+    <title>Registro</title>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld-EXYqAAAAAN0EhHirs0_Aoe4BqmrSN6mwwkj1"></script>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Cadastrar</h1>
+        <form action="/auth/register" method="POST">
+            <label for="Text">Username</label>
+            <input type="text" name="username" id="username" placeholder="Digite seu username">
+            <label for="text">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+            <input type="submit" value="Cadastrar">
+        </form>
+        <p>Já possui cadastro?</p><a href="/">Fazer login</a>
+    </div>
+
+    <button class="g-recaptcha"
+        data-sitekey="6Ld-EXYqAAAAAN0EhHirs0_Aoe4BqmrSN6mwwkj1"
+        data-callback='onSubmit'
+        data-action='submit'>
+    </button>
+
+    
+    
+    
+    <script>
+        function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+        }
+    </script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+	<script>
+		new window.VLibras.Widget('https://vlibras.gov.br/app');
+	</script>
+</body>
+</html>
