@@ -21,19 +21,19 @@ O projeto DS é uma aplicação web com a finalidade de desenvolver habilidades 
 
 Para clonar o repositório, utilize o comando:
 
-bash
+```bash
 git clone https://github.com/Derickcsantos/ProjetoDS.git
-
+```
 
 Instalando as dependências
-bash
+```bash
 npm Install
-
+```
 
 Inicializando o servidor
-bash
+```bash
 npm run start
-
+```
 
 
 ## Sobre nós :books:
