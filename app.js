@@ -8,7 +8,7 @@ const app = express();
 
 //Configurações
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 app.use(session({
     secret: 'segredo',
     resave: false,
@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //Rotas
-app.use('/auth', authRoutes);
+app.use('/auth',authRoutes);
 
 //Rotas para páginas 
 app.get('/', (req,res)=> res.sendFile(path.join(__dirname,'views/login.html')));

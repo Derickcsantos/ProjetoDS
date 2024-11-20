@@ -1,9 +1,9 @@
 create database login;
 
 create table usuario(
-	id_usuario int auto_increment primary key,
+	id int auto_increment primary key,
     username varchar(30) not null unique,
-    senha varchar(30)
+    password varchar(30)
 );
 
 create table perfil(

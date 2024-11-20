@@ -1,35 +1,70 @@
 const User = require('../models/User');
 
+class AuthController {
+    async register(req, res) {
+        try {
+            console.log('Body Recebido', req.body);
+            const { username, password } = req.body;
 
-class AuthController{
-    async register(req,res){
-        const {username,password} = req.body;
-        
-        if(!username || !password){
-            return res.status(400).send('Usuário e senha são obrigatórios.');
-        }
-        const existingUser = User.findUserByUsername(username);
-        if(existingUser){
-            return res.status(400).send('Usuário já existe.');
-        }
+            if (!username || !password) {
+                return res.status(400).send('Usuário e senha são obrigatórios.');
+            }
 
-        const user = await User.createUser(username, password);
-        return res.status(201).send(`Usuário Registrado: ${user.username}`);
+            const existingUser = await User.findUserByUsername(username);
+            if (existingUser) {
+                return res.status(400).send('Usuário já existe.');
+            }
+
+            const user = await User.createUser(username, password);
+
+            return res.status(201).send(`Usuário Registrado: ${user.username}`);
+        } catch (error) {
+            console.error('Erro ao registrar usuário:', error);
+            return res.status(500).send('Erro interno do servidor.');
+        }
     }
-    async login(req, res){
-        const {username, password} = req.body;
-        const user = User.findUserByUsername(username);
 
-        if(!user || !(await User.validatePassword(user,password))){
-            return res.status(401).send('Credenciais inválidas.');
+    async login(req, res) {
+        try {
+            const { username, password } = req.body;
+    
+            if (!username) {
+                return res.status(400).send('Usuário é obrigatório.');
+            }
+    
+            if (!password) {
+                return res.status(400).send('Senha é obrigatória.');
+            }
+    
+            const user = await User.findUserByUsername(username);
+    
+            if (!user || !(await User.validatePassword(password, user.password))) {
+                return res.status(401).send('Credenciais inválidas.');
+            }
+    
+            req.session.userId = user.id;
+            res.status(200).send({ message: 'Login bem-sucedido!' });
+    
+        } catch (error) {
+            console.error('Erro ao fazer login:', error);
+            return res.status(500).send('Erro interno do servidor.');
+        }
+    }
+    
+
+    logout(req, res) {
+        if (!req.session || !req.session.userId) {
+            return res.status(400).send('Usuário não está autenticado.');
         }
 
-        req.session.userId = user.id_usuario;
-        res.send('Login bem sucedido!');
-    }
-    logout(req,res){
-        req.session.destroy();
-        res.send('Logout realizado com sucesso.');
+        req.session.destroy(err => {
+            if (err) {
+                console.error('Erro ao destruir sessão:', err);
+                return res.status(500).send('Erro ao realizar logout.');
+            }
+            res.send('Logout realizado com sucesso.');
+        });
     }
 }
+
 module.exports = new AuthController();
