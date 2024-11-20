@@ -66,10 +66,11 @@
 
     <meta property="og:title" content="Projeto DS">
     <meta property="og:url" content="https://github.com/Derickcsantos/ProjetoDS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/ProjetoDS/css/logado.css">
+    <link rel="stylesheet" href="/assets/styles/logado.css">
     <title>Logado</title>
 </head>
 <body>
@@ -82,7 +83,7 @@
 
     <header>
         <nav class="navbar">
-            <div class="logo">Logo</div>
+            <div class="logo">Projeto DS</div>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -91,25 +92,60 @@
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <button onclick="abrirCard()" id="perfilBtn"><li>Meu perfil</li></button>
+                <li><a href="principal.html">Sair</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <div id="dadosCard" class="dados">
+            <i id="closeBtn" onclick="closeCard()" class="fa-solid fa-xmark close"></i>
+            <h2>Meu perfil</h2>
+            <p id="nomeCampo">Nome:</p>
+            <p id="emailCampo">Email:</p>
+            <p id="telefoneCampo">Telefone</p>
+            <p id="senhaCampo">Senha:</p>
+        </div>
 
 
     </main>
-    
-    <script>
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navList = document.querySelector('.nav-list');
+    <footer class="footer-bottom py-3 text-center">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="#services">Nossos serviços</a></li>
+                        <li><a href="https://wa.me/5511986261007?text=Trabalhe%20conosco">Fale conosco</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nos ajude</h4>
+                    <ul>
+                        <li><a href="https://github.com/Derickcsantos/ProjetoDS">Mais sobre o projeto</a></li>
+                        <li><a href="#contact">Feedback's</a></li>
+                        <li><a href="https://link.mercadopago.com.br/deckcs">faça uma doação</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/derick-campos-santos"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="https://wa.me/5511986261007?text=Fale%20conosco"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                        <a href="https://github.com/Derickcsantos/ProjetoDS"><ion-icon name="logo-github"></ion-icon></a>
+                    </div>                        
+                </div>
+            </div>
+        </div>
 
-        mobileMenu.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
 
-    </script>
+
+        <p class="copy">&copy; 2024  Projeto DS <br>Todos os direitos reservados.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/assets/js/script.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
          new window.VLibras.Widget('https://vlibras.gov.br/app');

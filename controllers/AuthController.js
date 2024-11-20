@@ -1,8 +1,10 @@
 const User = require('../models/User');
 
+
 class AuthController{
     async register(req,res){
         const {username,password} = req.body;
+        
         if(!username || !password){
             return res.status(400).send('Usuário e senha são obrigatórios.');
         }
