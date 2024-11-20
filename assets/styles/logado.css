@@ -106,6 +106,66 @@ header{
     color: #ccc;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    flex-direction: column;
+}
+
+.content {
+    max-width: 1200px;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espaço entre o conteúdo principal e os boxes */
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os boxes */
+    justify-content: center; /* Centraliza os boxes */
+    width: 100%; /* Garantir que ocupe toda a largura */
+}
+
+.box {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(25% - 20px); /* Tamanho dos boxes - 20px é para o gap */
+    min-width: 220px; /* Garantir que o box não fique menor que esse valor */
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1rem;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Efeito de hover para dar destaque ao box */
+}
+
+
 /*Rodapé*/
 .footer-bottom {
     background: #4829f9;
