@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -7,18 +7,17 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100dvh;
 }
 
-
-header{
+header {
     position: relative;
     top: 0;
     width: 100%;
     height: 50px;
     border-bottom: 1px solid #bebebe;
-    background-color: #ccc;
+    background-color: #fff;
 }
 
 .navbar {
@@ -51,12 +50,12 @@ header{
     font-size: 18px;
 }
 
-.nav-list button{
+.nav-list button {
     background-color: transparent;
     border: none;
     color: #fff;
-    font-size: 18px;;
-  }
+    font-size: 18px;
+}
 
 .menu-toggle {
     display: none;
@@ -71,7 +70,7 @@ header{
     margin: 3px 0;
 }
 
-.dados{
+.dados {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -86,19 +85,19 @@ header{
     z-index: 999;
 }
 
-.dados h2{
+.dados h2 {
     text-align: center;
     margin: 15px 0 50px 0;
 }
 
-.dados p{
+.dados p {
     padding: 14px;
     margin: 20px 0 0 0;
     width: 100%;
     text-decoration: underline;
 }
 
-.dados .close{
+.dados .close {
     font-size: 30px;
     position: absolute;
     top: 4%;
@@ -124,7 +123,7 @@ main {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin-bottom: 20px; /* Espaço entre o conteúdo principal e os boxes */
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -136,18 +135,18 @@ h1 {
 .boxes {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espaço entre os boxes */
-    justify-content: center; /* Centraliza os boxes */
-    width: 100%; /* Garantir que ocupe toda a largura */
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
 }
 
 .box {
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(57, 10, 190, 0.5), 0 4px 8px rgba(67, 36, 212, 0.5); /* Box-shadow roxo */
     border-radius: 8px;
     padding: 20px;
-    width: calc(25% - 20px); /* Tamanho dos boxes - 20px é para o gap */
-    min-width: 220px; /* Garantir que o box não fique menor que esse valor */
+    width: calc(25% - 20px);
+    min-width: 220px;
     box-sizing: border-box;
     transition: transform 0.3s ease-in-out;
 }
@@ -162,11 +161,10 @@ h1 {
 }
 
 .box:hover {
-    transform: scale(1.05); /* Efeito de hover para dar destaque ao box */
+    transform: scale(1.05);
 }
 
-
-/*Rodapé*/
+/* Rodapé */
 .footer-bottom {
     background: #4829f9;
     color: #fff;
@@ -174,7 +172,7 @@ h1 {
     font-weight: 300;
     padding: 40px 20px;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -273,7 +271,7 @@ h1 {
     margin: 0;
 }
 
-/* Responsividade - Cabeçario*/
+/* Responsividade - Cabeçario */
 @media (max-width: 768px) {
     .nav-list {
         display: none;
@@ -295,7 +293,14 @@ h1 {
     }
 }
 
-/*Responsividade rodapé*/
+/* Responsividade - Box */
+@media (max-width: 768px) {
+    .box {
+        width: calc(50% - 20px); /* Ajuste para 2 boxes por linha */
+    }
+}
+
+/* Responsividade - Rodapé */
 @media (max-width: 767px) {
     .footer-col {
         max-width: 100%;

@@ -10,33 +10,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Cabeçalho -->
-    <nav class="navbar">
-      <ul>
-        <li><a href="#about">Início</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#">Contatos</a></li>
-      </ul>
-      <a href="login.html"><button class="botao">Login</button></a>
-    </nav>
+    <header>
+      <nav class="navbar">
+          <div class="logo">Projeto DS</div>
+          <div class="menu-toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+              <li><a href="login.html">Login</a></li>
+          </ul>
+      </nav>
+  </header>
+  <main>
     <!-- Seção Apresentação-->
     <section id="about">
       <div class="about-content">
-        <img src="assets/img/perfil.jpg" alt="Foto de Perfil" class="profile-picture" />
         <div class="about-text">
-          <h2>Olá, eu sou Dev</h2>
+          <h2>Sobre o projeto</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis diam ex. Etiam cursus lectus risus, eget lacinia nibh consequat sed. Nulla quis varius enim, placerat maximus velit. Aenean non tristique est, quis consectetur ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean dapibus odio vel lacinia ullamcorper. Donec in consectetur dolor. Morbi quis ex mattis est facilisis maximus. Etiam at metus vel felis cursus finibus. Quisque varius, elit nec viverra auctor, ex quam lacinia augue, non iaculis augue erat a quam. Integer lacus nibh, convallis non lacinia a, luctus sed eros. Morbi eleifend ante id nulla sollicitudin interdum. Duis vestibulum, ligula et pellentesque bibendum, urna velit auctor elit, non finibus nunc lorem quis ex. Pellentesque semper massa at lectus tempor porta. Duis bibendum urna quis commodo convallis. Curabitur ac mi quis diam feugiat auctor.
-            Etiam sodales eget nisl eu porta. Ut sed finibus est. Morbi in efficitur tellus. Vivamus posuere felis sit amet risus consectetur, eget laoreet orci commodo. In at ante sed lectus auctor volutpat. Integer in lorem mattis, tincidunt massa id, accumsan metus. Suspendisse pretium rhoncus justo nec pharetra. Aenean dui quam, elementum in euismod non, faucibus vitae risus. Morbi mollis risus ut iaculis imperdiet. Pellentesque viverra et lorem imperdiet auctor. Sed interdum ante orci, nec ornare mauris condimentum sed. Donec et erat quam.
-            Proin non dolor libero. Duis accumsan magna a elementum pellentesque. Suspendisse porttitor dignissim dolor sit amet feugiat. In at justo nec tortor eleifend sollicitudin. Donec mollis ac tellus in sagittis. Nulla ac velit turpis. Praesent lobortis velit turpis, volutpat consequat tellus consequat vitae. Aliquam lobortis dictum congue.
+            O objetivo deste trabalho é aplicar as habilidades dos integrantes da equipe em Programação Orientada a Objetos (P.O.O.) em uma aplicação web,
+             visando o desenvolvimento de uma landing page com páginas de login e cadastro. A solução foi pensada para incorporar validações robustas tanto no lado do servidor, 
+             garantindo a integridade e segurança dos dados, quanto no lado do cliente, com a implementação de mecanismos como o reCAPTCHA para prevenir abusos. 
+             O sistema armazena os dados registrados em um banco de dados MySQL, com a possibilidade de, no futuro, migrar para uma solução de nuvem, 
+             permitindo que as informações possam ser acessadas de qualquer lugar. A metodologia de Programação Orientada a Objetos foi essencial para estruturar o projeto de maneira eficiente, 
+             tornando o código mais modular, reutilizável e de fácil manutenção, alinhado às melhores práticas de desenvolvimento de software. Durante o processo de desenvolvimento, 
+             a equipe fez uso de ferramentas modernas como Git & GitHub para o controle de versões, Trello para o gerenciamento ágil das tarefas e Scrum para garantir a entrega do projeto dentro do cronograma. 
+             Agradecemos à professora Pamela, que nos proporcionou o conhecimento necessário para aplicar esses conceitos, permitindo o desenvolvimento de habilidades essenciais para o mercado de trabalho,
+              como colaboração, comunicação, gestão de tempo e análise de projetos. Este trabalho foi uma valiosa oportunidade de aprender e crescer,
+               aprofundando também nosso conhecimento em tecnologias e metodologias que são amplamente utilizadas no desenvolvimento de software profissional.
           </p>
           <div class="social-links">
-            <a href="https://github.com/seuusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/seuusername" target="_blank"
+            <a href="https://github.com/Derickcsantos/ProjetoDS" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/derick-campos-santos" target="_blank"
               >LinkedIn</a
             >
-            <a href="mailto:email@example.com">E-mail</a>
+            <a href="derickcampossantos1@gmail.com">E-mail</a>
           </div>
         </div>
       </div>
@@ -44,27 +57,27 @@
 
     <!-- Seção de Habilidades-->
     <section id="skills">
-      <h2 class="espaco">Habilidades</h2>
+      <h2 class="espaco">Tecnologias</h2>
       <div class="card-container">
         <!-- Card 1 -->
         <div class="card">
           <h3>HTML & CSS</h3>
-          <p>Desenvolvimento de layouts responsivos e interfaces amigáveis.</p>
+          <p>Desenvolvimento do layout responsivo e amigavel</p>
           <button onclick="showSkillDetail('HTML & CSS')">Ver Mais</button>
         </div>
 
         <!-- Card 2 -->
         <div class="card">
           <h3>JavaScript</h3>
-          <p>Programação interativa e dinâmicas de front-end.</p>
+          <p>Linguagem de programação utilizada para desenvolvimento back-end</p>
           <button onclick="showSkillDetail('JavaScript')">Ver Mais</button>
         </div>
 
         <!-- Card 3 -->
         <div class="card">
-          <h3>React</h3>
+          <h3>MySQL</h3>
           <p>
-            Criação de aplicações web dinâmicas e componentes reutilizáveis.
+            Banco de dados relacional utilizado para armazenamento dos dados cadastrados
           </p>
           <button onclick="showSkillDetail('React')">Ver Mais</button>
         </div>
@@ -73,45 +86,72 @@
 
     <!-- Seção de Projetos -->
     <section id="projects">
-      <h2 class="espaco">Projetos</h2>
+      <h2 class="espaco">Ferramentas</h2>
       <div class="card-container">
         <!-- Card 1 -->
         <div class="card">
-          <h3>Projeto 1</h3>
+          <h3>Trello</h3>
           <p>
-            Descrição do projeto 1. Este projeto utiliza HTML, CSS e JavaScript.
+           Utilizado para organização e divisão de tarefas, tornando o processo de desenvolvimento organizado e dinamico.
           </p>
           <button onclick="viewProject('Projeto 1')">Ver Mais</button>
         </div>
 
         <!-- Card 2 -->
         <div class="card">
-          <h3>Projeto 2</h3>
-          <p>Descrição do projeto 2. Este projeto utiliza HTML, CSS e React.</p>
+          <h3>Scrum</h3>
+          <p>Metodologia agil para trabalhar em conjunto ao trello, tornando rapido a resolução de problemas e facilitando a entrega.</p>
           <button onclick="viewProject('Projeto 2')">Ver Mais</button>
         </div>
 
         <!-- Card 3 -->
         <div class="card">
-          <h3>Projeto 3</h3>
+          <h3>Git & GitHub</h3>
           <p>
-            Descrição do projeto 3. Este projeto utiliza HTML, CSS e Node.js.
+            Repositorio local e remoto utilizado para armazenamento e vercionamento de codigo, tornando facil o desenvolvimento do projeto.
           </p>
           <button onclick="viewProject('Projeto 3')">Ver Mais</button>
         </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="footer-container">
-          <p class="footer-text">© 2024 Meu Website</p>
-          <ul class="footer-links">
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Contato</a></li>
-              <li><a href="#">Privacidade</a></li>
-          </ul>
+    </main>
+    <footer class="footer-bottom py-3 text-center">
+      <div class="container-footer">
+          <div class="row-footer">
+              <div class="footer-col">
+                  <h4>Company</h4>
+                  <ul>
+                      <li><a href="sobre.html">Sobre nós</a></li>
+                      <li><a href="#services">Nossos serviços</a></li>
+                      <li><a href="https://wa.me/5511986261007?text=Trabalhe%20conosco">Fale conosco</a></li>
+                      
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Nos ajude</h4>
+                  <ul>
+                      <li><a href="https://github.com/Derickcsantos/ProjetoDS">Mais sobre o projeto</a></li>
+                      <li><a href="#contact">Feedback's</a></li>
+                      <li><a href="https://link.mercadopago.com.br/deckcs">faça uma doação</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <div class="social-links">
+                      <a href="https://www.linkedin.com/in/derick-campos-santos"><ion-icon name="logo-linkedin"></ion-icon></a>
+                      <a href="https://wa.me/5511986261007?text=Fale%20conosco"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                      <a href="https://github.com/Derickcsantos/ProjetoDS"><ion-icon name="logo-github"></ion-icon></a>
+                  </div>                        
+              </div>
+          </div>
       </div>
-  </footer>
 
-    <script src="script.js"></script>
+
+
+      <p class="copy">&copy; 2024  Projeto DS <br>Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/ProjetoDS/assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
