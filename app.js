@@ -8,7 +8,11 @@ const app = express();
 
 //Configurações
 
-app.use(express.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({
     secret: 'segredo',
     resave: false,
@@ -23,9 +27,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/auth',authRoutes);
 
 //Rotas para páginas 
-app.get('/', (req,res)=> res.sendFile(path.join(__dirname,'views/login.html')));
+
+app.get('/logado', (req, res) => {
+     res.sendFile(path.join(__dirname, 'views/logado.html'));
+});
+app.get('/', (req,res)=> res.sendFile(path.join(__dirname,'views/principal.html')));
 app.get('/register',(req,res)=> res.sendFile(path.join(__dirname,'views/register.html')));
-app.get('/land', (req,res)=>res.sendFile(path.join(__dirname, 'views/principal.html')));
+app.get('/login', (req,res)=>res.sendFile(path.join(__dirname, 'views/login.html')));
 
 //Inicializar Servidor
 
