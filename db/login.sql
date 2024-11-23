@@ -2,14 +2,14 @@ create database login;
 
 create table usuario(
 	id int auto_increment primary key,
-    username varchar(30) not null unique,
-    password varchar(30)
+    username varchar(255) not null unique,
+    password varchar(255)
 );
 
 create table perfil(
 	id_perfil int auto_increment primary key,
     usuario int,
-    foreign key (usuario) references usuario(id_usuario),
+    foreign key (usuario) references usuario(id),
     nome varchar(50),
     telefone varchar(20),
     cidade varchar(50),
@@ -21,7 +21,7 @@ create table perfil(
 create table autenticacao(
 	id_autenticacao int,
     usuario_autenticacao int,
-	foreign key (usuario_autenticacao) references usuario(id_usuario),
+	foreign key (usuario_autenticacao) references usuario(id),
     tipo varchar(20),
     data_ultima_tentativa datetime
 );

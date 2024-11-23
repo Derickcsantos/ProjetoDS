@@ -8,12 +8,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "<div align=\"center\">",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
+    "express-path": "^0.3.8",
     "express-session": "^1.18.1",
     "mysql2": "^3.11.4"
   }

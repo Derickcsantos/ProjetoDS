@@ -4,7 +4,9 @@ class AuthController {
     async register(req, res) {
         try {
             console.log('Body Recebido', req.body);
-            const { username, password } = req.body;
+            const {username,password} = req.body;
+            console.log('Username:', username);
+            console.log('Password:', password);
 
             if (!username || !password) {
                 return res.status(400).send('Usuário e senha são obrigatórios.');
@@ -17,7 +19,8 @@ class AuthController {
 
             const user = await User.createUser(username, password);
 
-            return res.status(201).send(`Usuário Registrado: ${user.username}`);
+            return res.redirect('/login');
+
         } catch (error) {
             console.error('Erro ao registrar usuário:', error);
             return res.status(500).send('Erro interno do servidor.');
@@ -43,7 +46,7 @@ class AuthController {
             }
     
             req.session.userId = user.id;
-            res.status(200).send({ message: 'Login bem-sucedido!' });
+            res.redirect('/logado');
     
         } catch (error) {
             console.error('Erro ao fazer login:', error);
