@@ -36,8 +36,11 @@ app.get('/register', (req, res) => res.sendFile(path.join(__dirname, 'views/regi
 app.get('/land', (req, res) => res.sendFile(path.join(__dirname, 'views/principal.html')));
 app.get('/logado', (req, res) => res.sendFile(path.join(__dirname, 'views/logado.html'))); // Nova rota para logado.html
 
-// Inicializar servidor
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app; // Exporta o app para Vercel
