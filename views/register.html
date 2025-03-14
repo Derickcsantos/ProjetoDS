@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +19,13 @@
     <div class="container">
         <h1>Cadastrar</h1>
         <form action="/auth/register" method="POST">
-            <label for="Text">Username</label>
-            <input type="text" name="username" id="username" placeholder="Digite seu username">
-            <label for="text">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Digite seu username" required>
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
             <input type="submit" value="Cadastrar">
         </form>
-        <p>Já possui cadastro?</p><a href="/">Fazer login</a>
+        <p>Já possui cadastro? <a href="/">Fazer login</a></p>
     </div>
 
     <button class="g-recaptcha"
@@ -34,17 +34,14 @@
         data-action='submit'>
     </button>
 
-    
-    
-    
     <script>
         function onSubmit(token) {
         document.getElementById("demo-form").submit();
         }
     </script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-	<script>
-		new window.VLibras.Widget('https://vlibras.gov.br/app');
-	</script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>
